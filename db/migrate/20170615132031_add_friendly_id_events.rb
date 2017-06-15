@@ -4,7 +4,7 @@ class AddFriendlyIdEvents < ActiveRecord::Migration[5.0]
     add_index :events, :friendly_id, :unique => true
 
     Event.find_each do |e|
-      e.update(:friendly_id => SecureRandom.uuid)
+      e.update( :friendly_id => SecureRandom.uuid )
     end
   end
 end
