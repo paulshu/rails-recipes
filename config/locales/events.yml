@@ -4,3 +4,4 @@ zh-CN:
       event:
         name: "活动名称"
         description: "描述"
+        status: "状态"

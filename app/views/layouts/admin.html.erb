@@ -25,6 +25,8 @@
           <ul class="nav navbar-nav">
             <% if current_user %>
               <li class="active"><%= link_to('活動管理', admin_events_path) %></li>
+              <li><%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %></li>
+              <li><%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %></li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
