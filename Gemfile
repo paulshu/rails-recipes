@@ -34,6 +34,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "rails-i18n"
 gem "devise-i18n"
+gem "select2-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -45,6 +47,9 @@ gem "devise-i18n"
 group :development, :test do
   gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "pry"
+  gem "awesome_rails_console"
+
   gem 'byebug', platform: :mri
 end
 
