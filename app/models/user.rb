@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :memberships
   has_many :groups, :through => :memberships
+  has_many :registrations
   has_one :profile
     accepts_nested_attributes_for :profile
     #可以在更新 User 时，也顺便可以更新 Profile 资料

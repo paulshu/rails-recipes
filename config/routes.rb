@@ -2,7 +2,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :events
+  resources :events do
+    resources :registrations do
+      member do
+        git "steps/2" => "registrations#step2", :as => :step2
+        patch "steps/2/update" => "registrations#step2_update", :as => :update_step2
+        get "steps/3" => "registrations#step3", :as => :step3
+        patch "steps/3/update" => "registrations#step3_update", :as => :update_step3
+      end
+    end
+  end
   resource :user
   #这里的路由设计使用单数 resource :user，跟 resources :users 相比，单数的路由少了 index action
   namespace :admin do

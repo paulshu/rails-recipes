@@ -5,6 +5,10 @@
   bulk_delete: 批次删除
   admin:
     event_list: 活动列表管理
+  registration:
+    status:
+      pending: 报名沿未完成
+      confirmed: 报名成功
 
   event:
     status:
