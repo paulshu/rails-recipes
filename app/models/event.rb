@@ -9,6 +9,9 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :tickets, :allow_destroy => true, :reject_if => :all_blank
   has_many :registrations, :dependent => :destroy
 
+  scope :only_public, -> { where( :status => "public" ) }
+  scope :only_available, -> { where( :status => ["public", "private"] )}
+
   include RankedModel
   ranks :row_order
 
